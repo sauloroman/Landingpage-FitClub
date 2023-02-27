@@ -1,0 +1,94 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.newsletter {
+
+  padding: v.$section-gap-small 0;
+  
+  @include m.responsiveDesign( tab-land ) {
+    padding: v.$section-gap 0;
+  }
+  
+  &__container {
+    position: relative;
+    border-radius: 30px;
+    padding: 3.2rem;
+    background-color: v.$color-primary;
+    @include m.flex( horizontalBetween );
+
+    @include m.responsiveDesign( tab-land ) {
+      padding: 10rem 3.2rem  ;
+    }
+  }
+
+  &__title {
+    width: 70%;
+    color: v.$color-white;
+    text-align: center;
+    
+    @include m.responsiveDesign( tab-land ) {
+      width: 100%;
+    }
+    
+  }
+
+  &__text {
+    width: 80%;
+    color: v.$color-white;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__form {
+    width: 100%;
+    @include m.flex( horizontalBetween );
+    gap: 2rem;
+
+    @include m.responsiveDesign( tab-port ) {
+      display: grid;
+      grid-template-columns: 80% 20%;
+    }
+
+    @include m.responsiveDesign( tab-land ) {
+      width: 60%;
+    }
+
+    &-input {
+      font-family: inherit;
+      padding: 1.5rem;
+      width: 100%;
+      border-radius: 9px;
+      height: 5rem;
+    }
+
+  }
+
+  &__image {
+    position: absolute;
+    width: 15rem;
+
+    @include m.responsiveDesign( tab-land ) {
+      width: 30rem;
+    }
+
+    &--blue {
+      top: 10%;
+      left: 0;
+
+      @include m.responsiveDesign( tab-land ) {
+        top: 0;
+      }
+    }
+
+    &--purple {
+      top: 0;
+      right: 0;
+
+      @include m.responsiveDesign( tab-land ) {
+        top: -25%;
+      }
+    }
+
+  }
+
+}
