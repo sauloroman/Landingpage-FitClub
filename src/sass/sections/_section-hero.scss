@@ -134,10 +134,11 @@
 
     &--purple {
       bottom: -10%;
-      right: -2%;
+      right: 0;
 
       @include m.responsiveDesign( tab-port ) {
         top: 5%;
+        right: -3%;
       }
     }
   }
