@@ -1,0 +1,42 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.link {
+
+  &:link,
+  &:visited {
+    color: v.$color-white;
+    padding: 1rem;
+    border-bottom: 1px solid transparent;
+    transition: all .4s ease-out;
+    width: 15rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    @include m.flex( verticalCenter );
+    
+    @include m.responsiveDesign( desktop ) {
+      text-align: left;
+    }
+  }
+
+  &:hover,
+  &:active {
+    border-bottom: 1px solid currentColor;
+  }
+
+  &--white:link,
+  &--white:visited {
+    display: unset;
+    color: v.$color-white;
+
+    @include m.responsiveDesign( desktop ) {
+      color: v.$color-black;
+    }
+  }
+
+  &--black:link,
+  &--black:visited {
+    color: v.$color-black;
+  }
+
+}

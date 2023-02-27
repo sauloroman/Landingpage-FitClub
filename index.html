@@ -23,11 +23,12 @@
 </head>
 <body>
   
+  <!-- ################### HEADER ################### -->
   <header class="header">
     <div class="container header__container">
 
       <p class="header__title">FitClub</p>
-
+      
       <nav class="navigation">
         <div class="navigation__close">
           <ion-icon name="close-outline" class="navigation__close-icon"></ion-icon>
@@ -41,16 +42,17 @@
         </ul>
         <p class="navigation__information">&copy; FitClub Company</p>
       </nav>
-
+      
       <div class="navigation__open">
         <ion-icon name="menu-outline" class="navigation__open-icon"></ion-icon>
       </div>
-
+      
       <button class="button button--outlined header__button u-width-20rem">Register Now</button>
-
+      
     </div>
   </header>
-
+  
+  <!-- ################### HERO SECTION ################### -->
   <section class="hero" id="home">
     <div class="container u-text-center hero__container">
       <h1 class="heading-primary" id="title">
@@ -105,6 +107,55 @@
       <img src='./build/img/elipsepurple-image.png' type='image/png' loading='lazy' />
     </picture>
 
+  </section>
+
+  <!-- ################### FEATURES SECTION ################### -->
+  <section class="features" id="features">
+    <div class="container grid grid-1to2">
+
+      <div class="features__content">
+        
+        <header class="header-section">
+          <h2 class="heading-secondary">Reach Your Body Goals at Fitclub</h2>
+          <p class="header-section__text">Annotate large volumes of 3d sensor, image, and video data at high throughput. ML-powerd pre- labeling and automated quality assurance system ensure high quality annotations.</p>
+        </header>
+
+        <ul class="features__list">
+          <li class="features__item">
+            <ion-icon name="checkmark-circle-outline" class="features__icon"></ion-icon>
+            <p>Cardio Strength</p>
+          </li>
+          <li class="features__item">
+            <ion-icon name="checkmark-circle-outline" class="features__icon"></ion-icon>
+            <p>Basic Yoga</p>
+          </li>
+          <li class="features__item">
+            <ion-icon name="checkmark-circle-outline" class="features__icon"></ion-icon>
+            <p>Muscle Building</p>
+          </li>
+        </ul>
+
+        <div class="features__button">
+          <button class="button button--orange u-width-20rem">Learn More</button>
+        </div>
+
+      </div>
+
+      <div class="features__visual">
+        <div class="features__heart">
+          <ion-icon name="heart-circle-outline" class="features__heart-icon"></ion-icon>
+          <p class="features__heart-title">Heart Rate</p>
+          <p class="features__heart-number">2723 <span>bpm</span></p>
+        </div>
+
+        <picture class="card">
+          <source srcset='./build/img/features-image.webp' type='image/webp' />
+          <source srcset='./build/img/features-image.avif' type='image/avif' />
+          <img src='./build/img/features-image.png' type='image/png' loading='lazy' />
+        </picture>
+      </div>
+
+    </div>
   </section>
 
 </body>
