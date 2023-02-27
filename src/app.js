@@ -52,4 +52,4 @@ ScrollReveal().reveal( document.querySelector('#newsletter'), { distance: '60px'
 ScrollReveal().reveal( document.querySelector('#about'), { distance: '60px', origin: 'bottom' } )
 ScrollReveal().reveal( document.querySelectorAll('.classes__card') );
 ScrollReveal().reveal( document.querySelector('.classes__high') );
-ScrollReveal().reveal( document.querySelectorAll('.trainers__image') );
+ScrollReveal().reveal( document.querySelectorAll('#trainers'), { distance: '60px', origin: 'bottom' } );
