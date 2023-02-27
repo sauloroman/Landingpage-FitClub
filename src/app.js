@@ -41,15 +41,14 @@ links.forEach( link => {
 // SCROLL REVEAL
 // ##################################
 
-ScrollReveal({ reset: true, duration: 2500, delay: 800 });
+ScrollReveal({ reset: true, duration: 2500, delay: 1000 });
 ScrollReveal().reveal( document.querySelector('#title'), { distance: '10px', origin: 'top', scale: 1.05, delay: 600 } );
 ScrollReveal().reveal( document.querySelector('#button-started'), { scale: 1.05 } );
 ScrollReveal().reveal( document.querySelector('#hero-image'), { distance: '10px', origin: 'left', delay: 600 } );
 ScrollReveal().reveal( document.querySelector('#hero-image2'), { distance: '10px', origin: 'right', delay: 600 } );
 ScrollReveal().reveal( document.querySelector('#features'), { distance: '60px', origin: 'top' } )
-ScrollReveal().reveal( document.querySelector('#testimonials'), { distance: '60px', origin: 'top' } )
-ScrollReveal().reveal( document.querySelector('#newsletter'), { distance: '60px', origin: 'top' } )
+ScrollReveal().reveal( document.querySelector('#testimonials'), { distance: '60px', origin: 'left' } )
+ScrollReveal().reveal( document.querySelector('#newsletter'), { distance: '60px', origin: 'right' } )
 ScrollReveal().reveal( document.querySelector('#about'), { distance: '60px', origin: 'bottom' } )
 ScrollReveal().reveal( document.querySelectorAll('.classes__card') );
 ScrollReveal().reveal( document.querySelector('.classes__high') );
-ScrollReveal().reveal( document.querySelectorAll('#trainers'), { distance: '60px', origin: 'bottom' } );
