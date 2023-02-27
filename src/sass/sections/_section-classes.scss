@@ -1,0 +1,141 @@
+@use 'abstracts/mixins' as m;
+@use 'abstracts/variables' as v;
+
+.classes {
+  padding: v.$section-gap-small 0;
+  background-color: v.$color-tertiary;
+
+  @include m.responsiveDesign( tab-land ) {
+    padding: v.$section-gap 0;
+  }
+
+  &__header {
+    @include m.flex( horizontalCenter );
+    gap: 2rem;
+    margin-bottom: 6rem;
+
+    @include m.responsiveDesign( tab-land ) {
+      @include m.flex( verticalBetween );
+    }
+  }
+
+  &__card {
+    
+    &-image {
+      position: relative;
+
+      picture {
+        overflow: hidden;
+      }
+
+      img {
+        transition: all .4s ease-out;
+        border-radius: 10px;
+        width: 100%;
+        
+        &:hover {
+          transform: scale(1.01);
+        }
+
+      }
+
+    }
+
+    &-icon {
+      position: absolute;
+      color: v.$color-white;
+      font-size: 3rem;
+      bottom: 10%;
+      left: 10%;
+    }
+
+    &-footer {
+      @include m.flex( verticalBetween );
+    }
+
+    &-user {
+      @include m.flex( verticalBetween );
+      gap: 1rem;
+    }
+
+    &-name {
+      color: v.$color-black;
+    }
+
+    &-iconBox {
+      @include m.flex( verticalBetween );
+      gap: 1rem;
+    }
+
+    &-iconTime {
+      font-size: 2.4rem;
+      color: v.$color-secondary;
+    }
+  }
+
+  &__high {
+
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      color: v.$color-white;
+      font-size: 3rem;
+    }
+
+    &-image {
+      picture {
+        overflow: hidden;
+      }
+  
+      img {
+        transition: all .4s ease-out;
+        border-radius: 10px;
+        width: 100%;
+        
+        &:hover {
+          transform: scale(1.01);
+        }
+      }
+    }
+
+    &-content {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      color: v.$color-white;
+      width: 80%;
+
+      .heading-tertiary {
+        color: v.$color-white;
+      }
+    }
+
+    &-footer {
+      @include m.flex( verticalBetween );
+    }
+
+    &-user {
+      @include m.flex( verticalBetween );
+      gap: 1rem;
+    }
+
+    &-name {
+      color: v.$color-white;
+    }
+
+    &-iconBox {
+      @include m.flex( verticalBetween );
+      gap: 1rem;
+    }
+
+    &-iconTime {
+      font-size: 2.4rem;
+      color: v.$color-white;
+    }
+
+  }
+
+}
