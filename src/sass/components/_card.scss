@@ -1,0 +1,15 @@
+@use 'abstracts/mixins' as m;
+
+.card {
+  overflow: hidden;
+    @include m.flex( verticalCenter );
+
+    img {
+      width: 80%;
+      border-radius: 10px;
+
+      @include m.responsiveDesign( tab-land ) {
+        width: 100%;
+      }
+    }
+}
