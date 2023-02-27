@@ -66,7 +66,7 @@
       <div class="hero__imagesBox grid grid-5-cols">
 
         <div class="hero__image hero__image-box--1">
-          <picture class="hero__image-box" id="hero-image">
+          <picture class="hero__image-box">
             <source srcset='./build/img/hero-image1.webp' type='image/webp' />
             <source srcset='./build/img/hero-image1.avif' type='image/avif' />
             <img src='./build/img/hero-image1.png' type='image/png' loading='lazy' />
@@ -80,7 +80,7 @@
 
         </div>
 
-        <picture class="hero__image-box hero__image-box--2" id="hero-image2">
+        <picture class="hero__image-box hero__image-box--2">
           <source srcset='./build/img/hero-image2.webp' type='image/webp' />
           <source srcset='./build/img/hero-image2.avif' type='image/avif' />
           <img src='./build/img/hero-image2.png' type='image/png' loading='lazy' />
@@ -562,12 +562,15 @@
     </div>
   </footer>
 
-  <!-- APPLICATION -->
-  <script src="./src/app.js"></script>
-
   <!-- ICONS -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- SCROLL REVEAL -->
+  <script src="./src/assets/scrollreveal.min.js"></script>
+
+  <!-- APPLICATION -->
+  <script src="./src/assets/app.js"></script>
 
 </body>
 </html>
