@@ -1,0 +1,58 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.about {
+  padding: v.$section-gap 0;
+    
+  &__content {
+    margin-bottom: 6rem;
+    padding: 3.2rem;
+
+    @include m.responsiveDesign( tab-port ) {
+      grid-row: 1 / 2 ;
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__numberBox {
+    @include m.flex( horizontalCenter );
+  }
+
+  &__number {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: v.$color-primary;
+
+    @include m.responsiveDesign( tab-land ) {
+      font-size: 4.8rem;
+    }
+  }
+
+  &__visual {
+    position: relative;
+  }
+
+  &__overlay {
+    width: 80%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include m.responsiveDesign( tab-port ) {
+      top: 58%
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
