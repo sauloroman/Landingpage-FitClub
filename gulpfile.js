@@ -37,7 +37,7 @@ const watchChanges = () => { /* To detect changes on SASS files */
 
 const imagesMinified = ( done ) => { /* To minify images */
   
-  src('./src/img/**/*')
+  src('./src/assets/img/**/*')
     .pipe( imagemin({ optimizationLevel: 3 }) )
     .pipe( dest('./build/img') )
     
@@ -46,7 +46,7 @@ const imagesMinified = ( done ) => { /* To minify images */
 
 const imagesWebp = ( done ) => { /* To become a jpg, jpeg, png image to webp image */
 
-  src('./src/img/**/*.{jpg,jpeg,png}')
+  src('./src/assets/img/**/*.{jpg,jpeg,png}')
     .pipe( webp({ quality: 50 }) )
     .pipe( dest('./build/img') )
 
@@ -55,7 +55,7 @@ const imagesWebp = ( done ) => { /* To become a jpg, jpeg, png image to webp ima
 
 const imagesAvif = ( done ) => { /* To become a jpg, jpeg, png image to avif image */
 
-  src('./src/img/**/*.{jpg,jpeg,png}')
+  src('./src/assets/img/**/*.{jpg,jpeg,png}')
     .pipe( avif({ quality: 50 }) )
     .pipe( dest('./build/img') )
 
