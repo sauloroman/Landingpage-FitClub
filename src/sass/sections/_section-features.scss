@@ -1,0 +1,97 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.features {
+  padding: v.$section-gap 0;
+
+  &__content {
+    padding: 3.2rem;
+  }
+
+  &__list {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding-left: 4rem;
+
+    @include m.responsiveDesign( tab-land ) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    p {
+      font-weight: 700;
+      color: v.$color-text-headings;
+    }
+  }
+
+  &__icon {
+    color: v.$color-secondary;
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+
+  &__button {
+    @include m.flex( verticalEnd );
+
+    @include m.responsiveDesign( tab-port ) {
+      @include m.flex( verticalStart );
+    }
+  }
+
+  &__visual {
+    position: relative;
+  }
+
+  &__heart {
+    position: absolute;
+    background-color: v.$color-white;
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+    top: 5%;
+    left: 5%;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+
+    @include m.responsiveDesign ( tab-land ) {
+      top: 65%;
+      left: -20%;
+    }
+
+    &-icon {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: v.$color-secondary;
+    }
+
+    &-number {
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: v.$color-secondary;
+
+      span {
+        color: v.$color-text-paragraphs;
+        font-weight: 400;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    @include m.flex( verticalCenter );
+
+    img {
+      width: 80%;
+      border-radius: 10px;
+
+      @include m.responsiveDesign( tab-land ) {
+        width: 100%;
+      }
+    }
+  }
+}
