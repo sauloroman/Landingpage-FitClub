@@ -1,0 +1,67 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+/*
+  FONT SIZES
+  75px | 56px | 42px | 32px | 24px | 17px | 13px | 10px | 7.5px | 5.6px | 4.2px
+*/
+
+html {
+
+  font-size: 50%;
+
+  @include m.responsiveDesign( tab-land ) {
+    font-size: 56.25%;
+  }
+
+  @include m.responsiveDesign( desktop ) {
+    font-size: 62.5%;
+  }
+
+}
+
+body {
+  font-size: v.$default-font-size;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: v.$color-text-paragraphs;
+}
+
+.heading-primary {
+  font-size: 4.2rem;
+  color: v.$color-white;
+
+  @include m.responsiveDesign( tab-port ) {
+    width: 85%;
+    font-size: 5.6rem;
+  }
+
+  @include m.responsiveDesign( tab-land ) {
+    line-height: 1.5;
+    font-size: 6.2rem;
+  }
+}
+
+.heading-secondary {
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
+  width: 85%;
+  font-size: 4rem;
+  font-weight: 600;
+  color: v.$color-text-headings;
+  text-align: center;
+  line-height: 1.2;
+
+  @include m.responsiveDesign( tab-port ) {
+    text-align: left;
+    line-height: 1.5;
+    width: 100%;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  color: v.$color-text-headings;
+  margin-bottom: 1.2rem;
+}
