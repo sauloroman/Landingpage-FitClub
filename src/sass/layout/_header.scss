@@ -11,7 +11,7 @@
   }
 
   background-color: v.$color-primary;
-  height: 7rem;
+  height: 9rem;
 
   @include m.responsiveDesign( tab-port ) {
     height: 8rem;
