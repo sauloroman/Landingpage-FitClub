@@ -1,0 +1,45 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: none;
+}
+
+input {
+  display: inline-block;
+  border: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
