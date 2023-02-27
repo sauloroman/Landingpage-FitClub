@@ -6,7 +6,7 @@
   padding: v.$section-gap-small 0;
 
   @include m.responsiveDesign( tab-land ) {
-    padding: v.$section-gap;
+    padding: 12rem 0;
   }
 
   &__content {
