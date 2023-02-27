@@ -1,0 +1,145 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.hero {
+  padding: v.$section-gap-small 0;
+  background-color: v.$color-primary;
+  position: relative;
+
+  @include m.responsiveDesign( tab-land ) {
+    height: 75rem;
+    margin-bottom: calc(v.$section-gap * 4);
+  }
+
+  &__container {
+    @include m.flex( horizontalCenter );
+    gap: 3.2rem;
+  }
+
+  &__description {
+    width: 80%;
+    color: v.$color-white;
+    font-size: 1.8rem;
+
+    @include m.responsiveDesign( tab-port ) {
+      width: 60%;
+    }
+
+    @include m.responsiveDesign( tab-land ) {
+      width: 40%;
+    }
+  }
+
+  &__imagesBox {
+    margin-bottom: 2rem;
+
+    @include m.responsiveDesign( desktop ) {
+      margin-bottom: v.$section-gap;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    
+    &-box {
+      width: 70%;
+      overflow: hidden;
+      
+      @include m.responsiveDesign( tab-land ) {
+        width: 100%;
+      }
+
+      img {
+        border-radius: 9px;
+      }
+      
+      &--1 {
+        grid-column: 1 / 6;
+        
+        @include m.responsiveDesign( tab-land ) {
+          align-self: start;
+          grid-column: 1 / 3;
+        }
+      }
+      
+      &--2 {
+        display: none;
+
+        @include m.responsiveDesign( tab-land ) {
+          display: unset;
+          grid-column: 3 / 6;
+        }
+      }
+
+    }
+
+    &-text {
+      color: v.$color-white;
+      margin: 1.6rem 0;
+
+      @include m.responsiveDesign( desktop ) {
+        width: 60%;
+        text-align: left;
+        font-size: 1.6rem;
+        color: v.$color-text-paragraphs;
+      }
+    }
+  }
+
+  &__item {
+    position: absolute;
+    width: 25rem;
+
+    @include m.responsiveDesign( tab-port ) {
+      width: 45rem;
+    }
+  
+    &--orange {
+      top: 0;
+      right: 0;
+
+      @include m.responsiveDesign( tab-port ) {
+        width: 30rem;
+        top: 5%;
+        left: 0%;
+      }
+
+      @include m.responsiveDesign( tab-land ) {
+        top: 0%;
+      }
+
+      @include m.responsiveDesign( desktop ) {
+        left: 20%;
+      }
+    }
+
+    &--blue {
+      top: 0;
+      left: 0;
+      z-index: -1;
+      
+      @include m.responsiveDesign( tab-port ) {
+        top: 50%;
+      }
+      
+      @include m.responsiveDesign( tab-land ) {
+        top: 35%;
+        z-index: unset;
+      }
+      
+      @include m.responsiveDesign( desktop ) {
+        top: 25%;
+      }
+    }
+
+    &--purple {
+      bottom: -10%;
+      right: -3%;
+
+      @include m.responsiveDesign( tab-port ) {
+        top: 5%;
+      }
+    }
+  }
+
+}
