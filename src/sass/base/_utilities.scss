@@ -1,0 +1,26 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.u-display-none {
+  display: none;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-margin-big {
+  margin-bottom: 4.8rem;
+}
+
+.u-color-black {
+  color: v.$color-black;
+}
+
+.u-width-20rem {
+  width: 20rem;
+}
+
+.u-width-100 {
+  width: 100%;
+}
