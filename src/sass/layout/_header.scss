@@ -1,0 +1,43 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.header {
+
+  &-fixed {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  background-color: v.$color-primary;
+  height: 7rem;
+
+  @include m.responsiveDesign( tab-port ) {
+    height: 8rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: v.$color-white;
+  }
+
+  &__container {
+    height: 100%;
+    @include m.flex(verticalBetween);
+
+    @include m.responsiveDesign( tab-port ) {
+      gap: 4rem;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include m.responsiveDesign( tab-port ) {
+      display: inline-block;
+    }
+  }
+
+}
